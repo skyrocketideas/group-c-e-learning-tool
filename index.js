@@ -19,7 +19,7 @@ express()
 		try {
 			const client = await pool.connect();
 			const result = await client.query(
-				"SELECT * FROM test_table"
+				"SELECT * FROM gee_table"
 			);
 			const results = {
 				results: result ? result.rows : null,
