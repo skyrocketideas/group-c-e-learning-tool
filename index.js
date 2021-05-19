@@ -10,23 +10,30 @@ const pool = new Pool({
 });
 const mongoose = require("mongoose");
 const articleController = require("./controllers/articleController");
+// const Article = require("./models/article");
 
 // mongoose
 
 const dbURI =
 	"mongodb+srv://graeme:test1234@clark-cluster.h2b1g.mongodb.net/magazine?retryWrites=true&w=majority";
-mongoose.connect(dbURI, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
-const db = mongoose.connection;
-db.on(
-	"error",
-	console.error.bind(console, "connection error:")
-);
-db.once("open", function () {
-	// we're connected
-});
+// mongoose.connect(dbURI, {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true,
+// });
+// const db = mongoose.connection;
+// db.on(
+// 	"error",
+// 	console.error.bind(console, "connection error:")
+// );
+// db.once("open", function () {
+// 	// we're connected
+// });
+mongoose
+	.connect(dbURI, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
+	.catch((err) => console.log(err));
 
 express()
 	.use(express.static(path.join(__dirname, "public")))
@@ -50,4 +57,5 @@ express()
 		}
 	})
 	.get("/articles", articleController.article_index)
+
 	.listen(PORT, () => console.log(`Listening on ${PORT}`));
