@@ -8,6 +8,9 @@ const articleSchema = new Schema({
 	body: {
 		type: String,
 	},
+	color: {
+		type: String,
+	},
 });
 
 const Article = mongoose.model("Article", articleSchema);
