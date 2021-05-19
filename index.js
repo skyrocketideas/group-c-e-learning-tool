@@ -10,10 +10,8 @@ const pool = new Pool({
 });
 const mongoose = require("mongoose");
 const articleController = require("./controllers/articleController");
-// const Article = require("./models/article");
 
 // mongoose
-
 const dbURI =
 	"mongodb+srv://graeme:test1234@clark-cluster.h2b1g.mongodb.net/magazine?retryWrites=true&w=majority";
 mongoose.connect(dbURI, {
