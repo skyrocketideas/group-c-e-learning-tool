@@ -8,6 +8,25 @@ const pool = new Pool({
 		rejectUnauthorized: false,
 	},
 });
+const mongoose = require("mongoose");
+const articleController = require("./controllers/articleController");
+
+// mongoose
+
+const dbURI =
+	"mongodb+srv://graeme:test1234@clark-cluster.h2b1g.mongodb.net/magazine?retryWrites=true&w=majority";
+mongoose.connect(dbURI, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+});
+const db = mongoose.connection;
+db.on(
+	"error",
+	console.error.bind(console, "connection error:")
+);
+db.once("open", function () {
+	// we're connected
+});
 
 express()
 	.use(express.static(path.join(__dirname, "public")))
@@ -30,4 +49,5 @@ express()
 			res.send("Error " + err);
 		}
 	})
+	.get("/articles", articleController.article_index)
 	.listen(PORT, () => console.log(`Listening on ${PORT}`));

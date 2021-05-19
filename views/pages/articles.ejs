@@ -8,11 +8,11 @@
 		<%- include ("../partials/nav.ejs") %>
 
 		<div class="container">
-			<h2>Database Results</h2>
+			<h2>Mongo Results</h2>
 
 			<ul>
-				<% results.forEach(function(r) { %>
-				<li><%= r.id %> - <%= r.name %></li>
+				<% articles.forEach(function(article) { %>
+				<li><%= article.title %> - <%= article.body %></li>
 				<% }); %>
 			</ul>
 		</div>
