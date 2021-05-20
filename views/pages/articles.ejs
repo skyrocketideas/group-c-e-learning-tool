@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<%- include ("../partials/header.ejs") %>
-	</head>
+  <head>
+    <%- include ("../partials/header.ejs") %>
+  </head>
 
-	<body>
-		<%- include ("../partials/nav.ejs") %>
+  <body>
+    <%- include ("../partials/nav.ejs") %>
 
-		<div class="container">
-			<h2>Mongo Resultsssssssss</h2>
+    <div class="container">
+      <h2>Mongo Resultsssssssss</h2>
 
-			<ul>
-				<% articles.forEach(function(article) { %>
-				<li>
-					<%= article.title %> - <%= article.body %> - <%=
-					article.color %>
-				</li>
-				<% }); %>
-			</ul>
-		</div>
-	</body>
+      <ul>
+        <% articles.forEach(function(article) { %>
+        <!--  <li><%= article.title %> - <%= article.body %> - <%= article.color %></li> -->
+        <li><%= article.color %></li>
+        <!--         <li><%= article.resource_title %> <%= article.resource_description %> <%= article.resource_text %> <%= article.resource_link %></li>
+ -->
+        <% }); %>
+      </ul>
+    </div>
+
+    <script></script>
+  </body>
 </html>
