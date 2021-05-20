@@ -4,7 +4,7 @@ const article_index = (req, res) => {
 	Article.find()
 		.then((result) => {
 			res.render("../views/pages/articles", {
-				articles: result,
+				blogs: result,
 			});
 		})
 		.catch((err) => {
