@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<%- include ("../partials/header.ejs") %>
-	</head>
+  <head>
+    <%- include ("../partials/header.ejs") %>
+  </head>
 
-	<body>
-		<%- include ("../partials/nav.ejs") %>
+  <body>
+    <%- include ("../partials/nav.ejs") %>
 
-		<div class="container">
-			<h2>Database Results</h2>
+    <div class="container">
+      <h2>Database Results</h2>
+      <h3>test header</h3>
 
-			<ul>
-				<% results.forEach(function(r) { %>
-				<li><%= r.id %> - <%= r.name %></li>
-				<% }); %>
-			</ul>
-		</div>
-	</body>
+      <ul>
+        <% results.forEach(function(r) { %>
+        <li><%= r.id %> - <%= r.name %></li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
 </html>
