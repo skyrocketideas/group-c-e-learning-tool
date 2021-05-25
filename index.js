@@ -19,10 +19,7 @@ mongoose.connect(dbURI, {
 	useUnifiedTopology: true,
 });
 const db = mongoose.connection;
-db.on(
-	"error",
-	console.error.bind(console, "connection error:")
-);
+db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
 	// we're connected
 });
@@ -41,9 +38,7 @@ express()
 	.get("/db", async (req, res) => {
 		try {
 			const client = await pool.connect();
-			const result = await client.query(
-				"SELECT * FROM gee_table"
-			);
+			const result = await client.query("SELECT * FROM challange");
 			const results = {
 				results: result ? result.rows : null,
 			};
