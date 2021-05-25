@@ -3,8 +3,8 @@ const Article = require("../models/article");
 const article_index = (req, res) => {
 	Article.find()
 		.then((result) => {
-			res.render("../views/pages/relational_database", {
-				relational_database: result,
+			res.render("../views/pages/articles", {
+				articles: result,
 			});
 		})
 		.catch((err) => {
