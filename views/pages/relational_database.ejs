@@ -11,8 +11,11 @@
       <h2>Mongo Resultsssssssss</h2>
 
       <ul>
+        <li><%= relational_database %></li>
+
         <% relational_database.forEach(function(article) { %>
 
+        <li><%= article %></li>
         <li><%= article.name %></li>
         <li><%= article.description %></li>
         <li><%= article.text %></li>
