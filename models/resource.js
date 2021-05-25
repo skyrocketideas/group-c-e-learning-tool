@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const resourceSchema = new Schema({
-	name: { type: String },
-	description: { type: String },
-	text: { type: String },
-	external_link: { type: String },
+	name: String,
+	description: String,
+	text: String,
+	external_link: String,
 });
 
 const Resource = mongoose.model("Resource", resourceSchema);
