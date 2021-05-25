@@ -6,11 +6,11 @@
 		<ul>
 			<% resources.forEach(function(resource) { %>
 			<li><h2><%= resource.name %></h2></li>
-			<li><%= resource.description %></li>
+			<li><h3><%= resource.description %></h3></li>
 			<li><%= resource.text %></li>
 			<li><%= resource.external_link %></li>
-			<% }); %>
 			<hr />
+			<% }); %>
 		</ul>
 	</body>
 </html>
