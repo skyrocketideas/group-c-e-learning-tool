@@ -2,19 +2,23 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const articleSchema = new Schema({
-	title: {
+	name: {
 		type: String,
 	},
-	body: {
+	description: {
 		type: String,
 	},
 	text: {
 		type: String,
 	},
-	link: {
+	external_link: {
 		type: String,
-	},
+	}
 });
+
+
+
+
 
 const Article = mongoose.model("Article", articleSchema);
 module.exports = Article;

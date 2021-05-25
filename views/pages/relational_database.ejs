@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("../partials/header.ejs") %>
+  </head>
+
+  <body>
+    <%- include ("../partials/nav.ejs") %>
+
+    <div class="container">
+      <h2>Mongo Resultsssssssss</h2>
+
+      <ul>
+        <% articles.forEach(function(article) { %>
+
+        <li><%= article.name %></li>
+        <li><%= article.description %></li>
+        <li><%= article.text %></li>
+        <li><a href=""> <%= article.external_link %> </a></li>
+
+        <% }); %>
+      </ul>
+    </div>
+
+    <script></script>
+  </body>
+</html>
