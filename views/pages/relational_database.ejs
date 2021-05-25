@@ -10,19 +10,17 @@
     <div class="container">
       <h2>Mongo Resultsssssssss</h2>
 
+      <% relational_database.forEach(function(object) { %>
       <ul>
         <li><%= relational_database %></li>
 
-        <% articles.forEach(function(article) { %>
-
-        <li><%= article %></li>
-        <li><%= article.name %></li>
-        <li><%= article.description %></li>
-        <li><%= article.text %></li>
-        <li><a href=""> <%= article.external_link %> </a></li>
-
-        <% }); %>
+        <li><%= object %></li>
+        <li><%= object.name %></li>
+        <li><%= object.description %></li>
+        <li><%= object.text %></li>
+        <li><a href=""> <%= object.external_link %> </a></li>
       </ul>
+      <% }); %>
     </div>
 
     <script></script>
