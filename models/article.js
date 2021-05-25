@@ -11,14 +11,12 @@ const articleSchema = new Schema({
 	body: {
 		type: String,
 	},
-	resource: [
-		{
-			name: String,
-			description: String,
-			text: String,
-			external_link: String,
-		},
-	],
+	resource: {
+		name: String,
+		description: String,
+		text: String,
+		external_link: String,
+	},
 });
 
 const Article = mongoose.model("Article", articleSchema);
