@@ -50,5 +50,6 @@ express()
 		}
 	})
 	.get("/articles", articleController.article_index)
+	.get("/resources", resourceController.resource_index)
 
 	.listen(PORT, () => console.log(`Listening on ${PORT}`));
