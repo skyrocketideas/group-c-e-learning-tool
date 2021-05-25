@@ -10,6 +10,7 @@ const pool = new Pool({
 });
 const mongoose = require("mongoose");
 const articleController = require("./controllers/articleController");
+const resourceController = require("./controllers/resourceController");
 
 // mongoose
 const dbURI =
@@ -50,6 +51,6 @@ express()
 		}
 	})
 	.get("/articles", articleController.article_index)
-	// .get("/resources", resourceController.resource_index)
+	.get("/resources", resourceController.resource_index)
 
 	.listen(PORT, () => console.log(`Listening on ${PORT}`));
