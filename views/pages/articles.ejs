@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%- include ("../partials/header.ejs") %>
-  </head>
+	<head>
+		<%- include ("../partials/header.ejs") %>
+	</head>
 
-  <body>
-    <%- include ("../partials/nav.ejs") %>
+	<body>
+		<%- include ("../partials/nav.ejs") %>
 
-    <div class="container">
-      <h2>Mongo Resultsssssssss</h2>
+		<div class="container">
+			<h2>Mongo Resultsssssssss</h2>
 
-      <ul>
-        <% articles.forEach(function(article) { %>
+			<ul>
+				<% articles.forEach(function(article) { %>
 
-        <li><%= article.title %></li>
+				<li><%= article.title %></li>
+				<li><%= article.body %></li>
 
-        <% }); %>
-      </ul>
-    </div>
+				<% }); %>
+			</ul>
+		</div>
 
-    <script></script>
-  </body>
+		<script></script>
+	</body>
 </html>

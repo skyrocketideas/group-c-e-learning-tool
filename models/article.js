@@ -5,7 +5,7 @@ const articleSchema = new Schema({
 	title: {
 		type: String,
 	},
-	description: {
+	body: {
 		type: String,
 	},
 	text: {
@@ -13,12 +13,8 @@ const articleSchema = new Schema({
 	},
 	link: {
 		type: String,
-	}
+	},
 });
-
-
-
-
 
 const Article = mongoose.model("Article", articleSchema);
 module.exports = Article;
