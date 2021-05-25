@@ -2,14 +2,15 @@
 <html lang="en">
 	<head> </head>
 	<body>
-		<h1>Resources??????</h1>
+		<h1>Educational Resources</h1>
 		<ul>
 			<% resources.forEach(function(resource) { %>
-			<li><%= resource.name %></li>
+			<li><h2><%= resource.name %></h2></li>
 			<li><%= resource.description %></li>
 			<li><%= resource.text %></li>
 			<li><%= resource.external_link %></li>
 			<% }); %>
+			<hr />
 		</ul>
 	</body>
 </html>
