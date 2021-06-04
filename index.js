@@ -50,6 +50,20 @@ express()
 			res.send("Error " + err);
 		}
 	})
+	.get("/challenges", async (req, res) => {
+		try {
+			const client = await pool.connect();
+			const result = await client.query("SELECT * FROM challange");
+			const results = {
+				results: result ? result.rows : null,
+			};
+			res.render("pages/challenges", results);
+			client.release();
+		} catch (err) {
+			console.error(err);
+			res.send("Error " + err);
+		}
+	})
 	.get("/articles", articleController.article_index)
 	.get("/resources", resourceController.resource_index)
 
