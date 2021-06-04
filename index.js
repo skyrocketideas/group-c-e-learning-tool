@@ -39,7 +39,7 @@ express()
 	.get("/db", async (req, res) => {
 		try {
 			const client = await pool.connect();
-			const result = await client.query("SELECT * FROM challange");
+			const result = await client.query("SELECT * FROM total_challenge_rank");
 			const results = {
 				results: result ? result.rows : null,
 			};
